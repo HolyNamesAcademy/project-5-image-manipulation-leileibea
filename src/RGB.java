@@ -12,8 +12,9 @@ public class RGB {
      * Default constructor, initializes channels to 0 (a black pixel)
      */
     public RGB() {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        red=0;
+        green=0;
+        blue=0;
     }
 
     /**
@@ -27,25 +28,41 @@ public class RGB {
      * @param blue blue channel value
      */
     public RGB(int red, int green, int blue) {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        if(red<0)
+        this.red=0;
+        else if (red<256) {
+            this.red=red;
+        }
+        else
+            this.red=255;
+        if(green<0)
+            this.green=0;
+        else if (green<256) {
+            this.green=green;
+        }
+        else
+            this.green=255;
+        if(blue<0)
+            this.blue=0;
+        else if (blue<256) {
+            this.blue=blue;
+        }
+        else
+            this.blue=255;
     }
 
     // Getters
 
     public int GetRed() {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        return red;
     }
 
     public int GetGreen() {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        return green;
     }
 
     public int GetBlue() {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        return blue;
     }
 
     /*
@@ -55,18 +72,36 @@ public class RGB {
     or channel value > 255 should be handled properly.
      */
     public void SetRed(int red) {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        if(red<0)
+            this.red=0;
+        else if (red<256) {
+            this.red=red;
+        }
+        else {
+            this.red = 255;
+        }
     }
 
     public void SetGreen(int green) {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        if(green<0)
+            this.green=0;
+        else if (green<256) {
+            this.green=green;
+        }
+        else {
+            this.green = 255;
+        }
     }
 
     public void SetBlue(int blue) {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        if(blue<0)
+            this.blue=0;
+        else if (blue<256) {
+            this.blue=blue;
+        }
+        else {
+            this.blue = 255;
+        }
     }
 
     /**

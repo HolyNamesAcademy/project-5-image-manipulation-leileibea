@@ -19,25 +19,44 @@ public class HSL {
      * @param lightness lightness value
      */
     public HSL(int hue, double saturation, double lightness) {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        if(hue<0)
+            this.hue=0;
+        else if (hue<361) {
+            this.hue=hue;
+        }
+        else {
+            this.hue = 360;
+        }
+        if(saturation<0)
+            this.saturation=0;
+        else if (saturation<=1) {
+            this.saturation=saturation;
+        }
+        else {
+            this.saturation = 1;
+        }
+        if(lightness<0)
+            this.lightness=0;
+        else if (lightness<=1) {
+            this.lightness=lightness;
+        }
+        else {
+            this.lightness = 1;
+        }
     }
 
     // Getters
 
     public int GetHue() {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        return hue;
     }
 
     public double GetSaturation() {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        return saturation;
     }
 
     public double GetLightness() {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        return lightness;
     }
 
     /*
@@ -48,18 +67,36 @@ public class HSL {
     0 <= lightness <= 1
      */
     public void SetHue(int hue) {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        if(hue<0)
+            this.hue=0;
+        else if (hue<361) {
+            this.hue=hue;
+        }
+        else {
+            this.hue = 360;
+        }
     }
 
     public void SetSaturation(double saturation) {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        if(saturation<0)
+            this.saturation=0;
+        else if (saturation<=1) {
+            this.saturation=saturation;
+        }
+        else {
+            this.saturation = 1;
+        }
     }
 
     public void SetLightness(double lightness) {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        if(lightness<0)
+            this.lightness=0;
+        else if (lightness<=1) {
+            this.lightness=lightness;
+        }
+        else {
+            this.lightness = 1;
+        }
     }
 
     /**
